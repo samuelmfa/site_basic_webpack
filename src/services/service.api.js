@@ -25,7 +25,7 @@ const getReport = ({date, region_name, region_province, city_name, per_page}) =>
 const getReportTotal = ({date, region_name}) => {
     return axios({
         method: appEnum.methods.GET,
-        url: `${appEnum.URL_API}${appEnum.GET_REPORTS_TOTAL}?${region}&${region_name}`,
+        url: `${appEnum.URL_API}${appEnum.GET_REPORTS_TOTAL}?date=${date}&iso=${region_name}`,
     });
 }
 
